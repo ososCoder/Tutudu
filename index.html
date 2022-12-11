@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/main.js"></script>
+    <title>Tutudu</title>
+  </head>
+  <body>
+    <header>
+      <h1>Tutudu</h1>
+      <h2>Organiza tu día</h2>
+    </header>
+    <main>
+      <form class="form">
+        <fieldset class="newTask">
+          <legend>Nueva tarea</legend>
+          <input type="text" name="input" />
+        </fieldset>
+
+        <fieldset class="deadline">
+          <legend>Deadline</legend>
+          <input type="datetime-local" name="deadline" value=" " />
+          <!-- <input type="time" name="time" /> -->
+        </fieldset>
+
+        <fieldset class="priorityColor">
+          <legend>Prioridad y color</legend>
+          <select name="priority">
+            <option value="Alta">Alta</option>
+            <option value="Media">Media</option>
+            <option value="Baja">Baja</option>
+          </select>
+          <input type="color" name="color" />
+        </fieldset>
+
+        <button>Add</button>
+      </form>
+      <section class="tasks">
+        <h2>Tareas</h2>
+        <ul class="ul-tasks"></ul>
+      </section>
+    </main>
+    <footer>&copy Tutudu</footer>
+  </body>
+</html>

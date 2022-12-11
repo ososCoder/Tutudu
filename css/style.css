@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/*GENERAL*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*HEADER*/
+header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header > h1 {
+  font-family: 'Pacifico', sans-serif;
+  font-size: 3.5rem;
+}
+
+header > h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/*MAIN*/
+main {
+  flex-grow: 1;
+}
+
+/*form*/
+.form {
+  padding: 1.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form input,
+.form select,
+.form button {
+  border-radius: 8px;
+}
+
+.form > fieldset {
+  padding: 0.3rem 0;
+  border: none;
+}
+
+.form > fieldset > legend {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.newTask > input {
+  width: 100%;
+  height: 2.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+
+.deadline {
+  display: flex;
+  justify-content: start;
+}
+
+.deadline > input {
+  height: 2.5rem;
+  width: 100%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+.priorityColor {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.priorityColor > select,
+.priorityColor > input {
+  height: 2.5rem;
+  width: 50%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+.form > button {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/*SECTION TASKS*/
+.tasks {
+  padding: 1rem;
+}
