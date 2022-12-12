@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
-/*GENERAL*/
+/*GENERAL###############################################################*/
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/*HEADER*/
+/*HEADER######################################################################*/
 header {
   padding: 1rem;
   display: flex;
@@ -33,16 +33,73 @@ header > h2 {
   font-size: 1.5rem;
 }
 
-/*MAIN*/
+/*MAIN########################################################################*/
 main {
   flex-grow: 1;
 }
 
-/*form*/
+/*FORM*/
 .form {
   padding: 1.2rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+/*fieldsets*/
+.form > fieldset {
+  padding: 0.1rem 0 0.8rem 0;
+  font-size: 1.2rem;
+  border: none;
+  width: 100%;
+}
+
+.newTask > input,
+.deadline > input,
+.priority > select {
+  font-family: 'Open Sans', sans-serif;
+  height: 2.5rem;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.newTask > input,
+.deadline > input {
+  width: 100%;
+}
+
+.priority > select {
+  width: 50%;
+}
+
+/*CLEAN SECTION*/
+.clean {
+  padding: 1.2rem;
+  width: 100%;
+}
+
+/*TASKS SECTION*/
+.tasks {
+  padding: 1.2rem;
+  width: 100%;
+}
+
+.tasks > h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/*ul-tasks*/
+.ul-tasks {
+  list-style: none;
+}
+
+.ul-tasks > li.high {
+  background-color: red;
+}
+
+.ul-tasks > li.done {
+  opacity: 0.25;
+  text-decoration: line-through;
 }

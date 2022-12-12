@@ -115,6 +115,16 @@ function render() {
       checkbox.setAttribute('checked', true);
     }
 
+    //prioridad de la tarea
+    if (priority === 'Alta') {
+      //agregar clase al liTask
+      liTask.classList.add('high');
+    } else if (priority === 'Media') {
+      liTask.classList.add('medium');
+    } else {
+      liTask.classList.add('low');
+    }
+
     //append al frag del liTask con la info
     //se hace como prepend para posicionarlo primero de la lista
     frag.prepend(liTask);
