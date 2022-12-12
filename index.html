@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/main.js"></script>
+    <script src="/main.js" defer></script>
     <title>Tutudu</title>
   </head>
   <body>
     <header>
-      <h1>Tutudu</h1>
+      <h1>Tutudú</h1>
       <h2>Organiza tu día</h2>
     </header>
     <main>
@@ -22,22 +22,25 @@
 
         <fieldset class="deadline">
           <legend>Deadline</legend>
-          <input type="datetime-local" name="deadline" value=" " />
-          <!-- <input type="time" name="time" /> -->
+          <input type="datetime-local" name="deadlineDate" />
+          <!-- <input type="time" name="deadlineTime" /> -->
         </fieldset>
 
-        <fieldset class="priorityColor">
-          <legend>Prioridad y color</legend>
+        <fieldset class="priority">
+          <legend>Prioridad</legend>
           <select name="priority">
-            <option value="Alta">Alta</option>
-            <option value="Media">Media</option>
-            <option value="Baja">Baja</option>
+            <option value="Alta">Alta 🔴</option>
+            <option value="Media">Media 🟡</option>
+            <option value="Baja">Baja 🟢</option>
           </select>
-          <input type="color" name="color" />
         </fieldset>
 
         <button>Add</button>
       </form>
+      <section class="clean">
+        <button class="cleanChecked">Clean Checked</button>
+        <button class="cleanAll">CLEAN ALL</button>
+      </section>
       <section class="tasks">
         <h2>Tareas</h2>
         <ul class="ul-tasks"></ul>
