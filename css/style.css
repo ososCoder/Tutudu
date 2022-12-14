@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
+  background: #fef9a7;
 }
 
 /*HEADER######################################################################*/
@@ -21,16 +22,40 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  background: #fac213;
 }
 
 header > h1 {
   font-family: 'Pacifico', sans-serif;
-  font-size: 3.5rem;
+  font-size: 4rem;
+  position: relative;
+  color: #d61c4e;
+  z-index: 1;
+}
+
+header > h1::before {
+  content: 'Tutudú';
+  position: absolute;
+  transform: translate(2.5px, -3px);
+  z-index: -1;
+  color: #303030;
 }
 
 header > h2 {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: #d61c4e;
+  font-family: 'Pacifico';
+  z-index: 1;
+}
+
+header > h2::before {
+  content: 'Organiza tu día';
+  position: absolute;
+  transform: translate(2.5px, -2px);
+  z-index: -1;
+  color: #303030;
 }
 
 /*MAIN########################################################################*/
@@ -45,14 +70,18 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
+  background-color: #fac213;
 }
 
 /*fieldsets*/
 .form > fieldset {
   padding: 0.1rem 0 0.8rem 0;
   font-size: 1.2rem;
+  font-weight: 700;
   border: none;
   width: 100%;
+  color: #d61c4e;
 }
 
 .newTask > input,
@@ -62,6 +91,9 @@ main {
   height: 2.5rem;
   font-size: 1.1rem;
   padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #303030;
+  outline: none;
 }
 
 .newTask > input,
@@ -73,16 +105,60 @@ main {
   width: 50%;
 }
 
+/*button add task*/
+.form > button {
+  height: 2.5rem;
+  border-radius: 10px;
+  border: 1px solid #303030;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgb(63, 169, 63);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.form > button:active {
+  background: rgb(37, 103, 37);
+  transform: translate(3px, 3px);
+}
+
 /*CLEAN SECTION*/
 .clean {
-  padding: 1.2rem;
+  padding: 1rem;
   width: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  position: relative;
+  background: #fef9a7;
+}
+
+.cleanChecked,
+.cleanAll {
+  height: 2.5rem;
+  width: 6rem;
+  padding: 0 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #303030;
+  z-index: 1;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cleanChecked {
+  background: rgb(56, 152, 230);
+}
+
+.cleanAll {
+  background-color: rgb(233, 86, 86);
 }
 
 /*TASKS SECTION*/
 .tasks {
   padding: 1.2rem;
   width: 100%;
+  background-color: #fef9a7;
 }
 
 .tasks > h2 {
@@ -102,4 +178,51 @@ main {
 .ul-tasks > li.done {
   opacity: 0.25;
   text-decoration: line-through;
+}
+
+/*CUSTOM SHAPES DIVIDERS*/
+/*header*/
+.custom-shape-divider-bottom-1671026833 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  /* z-index: -1; */
+}
+
+.custom-shape-divider-bottom-1671026833 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 71px;
+}
+
+.custom-shape-divider-bottom-1671026833 .shape-fill {
+  fill: #fac213;
+}
+
+/*section clean*/
+.custom-shape-divider-top-1671027152 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  /* z-index: -1; */
+}
+
+.custom-shape-divider-top-1671027152 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+.custom-shape-divider-top-1671027152 .shape-fill {
+  fill: #fac213;
 }
