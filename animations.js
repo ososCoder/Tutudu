@@ -12,7 +12,7 @@ function move() {
   for (const li of highLi) {
     gsap.fromTo(
       li,
-      { x: -2000 },
+      { x: -200 },
       { x: 0, duration: randomNum(), ease: 'back.out(1.7)' }
     );
   }
@@ -20,7 +20,7 @@ function move() {
   for (const li of mediumLi) {
     gsap.fromTo(
       li,
-      { x: 2000 },
+      { x: 200 },
       { x: 0, duration: randomNum(), ease: 'back.out(1.7)' }
     );
   }
@@ -28,7 +28,7 @@ function move() {
   for (const li of lowLi) {
     gsap.fromTo(
       li,
-      { x: 2000 },
+      { x: 200 },
       { x: 0, duration: randomNum(), ease: 'back.out(1.7)' }
     );
   }
