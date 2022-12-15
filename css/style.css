@@ -107,14 +107,19 @@ main {
 
 /*button add task*/
 .form > button {
-  height: 2.5rem;
+  height: 2.8rem;
   border-radius: 10px;
   border: 1px solid #303030;
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
+  text-transform: uppercase;
   color: #fff;
   background: rgb(63, 169, 63);
   box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .form > button:active {
@@ -122,12 +127,16 @@ main {
   transform: translate(3px, 3px);
 }
 
+.add {
+  height: 1rem;
+}
+
 /*CLEAN SECTION*/
 .clean {
   padding: 1rem;
   width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
   position: relative;
   background: #fef9a7;
@@ -135,27 +144,48 @@ main {
 
 .cleanChecked,
 .cleanAll {
-  height: 2.5rem;
+  height: 2.8rem;
   width: 6rem;
-  padding: 0 0.5rem;
+  padding: 0.1rem 0.4rem;
   border-radius: 10px;
   border: 1px solid #303030;
   z-index: 1;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
   color: #fff;
   box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  font-size: 0.8rem;
 }
 
 .cleanChecked {
-  background: rgb(56, 152, 230);
+  background: #3898e6;
+  width: 11rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 0.3rem; */
+}
+
+.broom {
+  width: 2rem;
+  transform: rotate(45deg);
 }
 
 .cleanAll {
-  background-color: rgb(233, 86, 86);
+  background-color: #e95656;
+  display: flex;
+  width: 7rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.trash {
+  width: 2rem;
 }
 
 /*TASKS SECTION*/
 .tasks {
+  margin-top: 1rem;
   padding: 1.2rem;
   width: 100%;
   background-color: #fef9a7;
@@ -163,21 +193,114 @@ main {
 
 .tasks > h2 {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+  color: #d61c4e;
+  font-family: 'Pacifico';
+  position: relative;
+  z-index: 1;
+}
+
+.tasks > h2::before {
+  content: 'Tareas';
+  position: absolute;
+  transform: translate(2.5px, -2px);
+  z-index: -1;
+  color: #303030;
 }
 
 /*ul-tasks*/
 .ul-tasks {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.ul-tasks > li {
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: #fff;
+  border: 1px solid #303030;
+  box-shadow: -3px 3px rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-rows: 1fr repeat(2, 30px);
+  grid-template-columns: 1fr 20px;
+  grid-template-areas:
+    'task task'
+    'deadline deadline'
+    'priority check';
+}
+
+/*li's*/
+.taskText {
+  grid-area: task;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.taskPriority {
+  grid-area: priority;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.taskDeadline {
+  grid-area: deadline;
 }
 
 .ul-tasks > li.high {
-  background-color: red;
+  background-color: #dd5353;
+}
+
+.ul-tasks > li.medium {
+  background-color: #efd345;
+}
+
+.ul-tasks > li.low {
+  background-color: #519259;
 }
 
 .ul-tasks > li.done {
-  opacity: 0.25;
+  opacity: 0.5;
+}
+
+.ul-tasks > li.done > .taskText,
+.ul-tasks > li.done > .taskDeadline {
   text-decoration: line-through;
+}
+
+/*FOOTER########################################################################*/
+footer {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 0.5rem;
+  background-color: #fac213;
+  margin-top: 2rem;
+  z-index: 2;
+}
+
+footer > h4:first-child {
+}
+
+.ososCoder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+.github {
+  height: 2rem;
+  cursor: pointer;
 }
 
 /*CUSTOM SHAPES DIVIDERS*/
@@ -190,7 +313,6 @@ main {
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
-  /* z-index: -1; */
 }
 
 .custom-shape-divider-bottom-1671026833 svg {
@@ -225,4 +347,27 @@ main {
 
 .custom-shape-divider-top-1671027152 .shape-fill {
   fill: #fac213;
+}
+
+/*footer*/
+.custom-shape-divider-top-1671105885 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+.custom-shape-divider-top-1671105885 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 20px;
+}
+
+.custom-shape-divider-top-1671105885 .shape-fill {
+  fill: #fef9a7;
 }

@@ -5,7 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/main.js" defer></script>
+    <script src="/main.js" defer type="module"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script src="/animations.js" defer type="module"></script>
     <title>Tutudu</title>
   </head>
   <body>
@@ -30,7 +39,7 @@
       <form class="form">
         <fieldset class="newTask">
           <legend>Nueva tarea</legend>
-          <input type="text" name="input" />
+          <input type="text" name="input" required />
         </fieldset>
 
         <fieldset class="deadline">
@@ -47,7 +56,9 @@
             <option value="Baja">Baja</option>
           </select>
         </fieldset>
-        <button>Add</button>
+        <button>
+          Añadir tarea <img class="add" src="/css/icons/add.svg" alt="add" />
+        </button>
       </form>
       <section class="clean">
         <div class="custom-shape-divider-top-1671027152">
@@ -63,14 +74,41 @@
             ></path>
           </svg>
         </div>
-        <button class="cleanChecked">Clean Checked</button>
-        <button class="cleanAll">CLEAN ALL</button>
+        <button class="cleanAll">
+          limpiar tutudú
+          <img class="trash" src="/css/icons/trash.svg" alt="trash" />
+        </button>
+        <button class="cleanChecked">
+          limpiar tareas completadas
+          <img class="broom" src="/css/icons/brrom.svg" alt="broom" />
+        </button>
       </section>
       <section class="tasks">
         <h2>Tareas</h2>
         <ul class="ul-tasks"></ul>
       </section>
     </main>
-    <footer>&copy Tutudu</footer>
+    <footer>
+      <div class="custom-shape-divider-top-1671105885">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+      <h4>&copyTutudú</h4>
+      <h4 class="ososCoder">
+        ososCoder
+        <a href="https://github.com/ososCoder"
+          ><img class="github" src="/css/icons/github.svg" alt="github"
+        /></a>
+      </h4>
+    </footer>
   </body>
 </html>

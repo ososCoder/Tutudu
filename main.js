@@ -1,5 +1,7 @@
 'use strict';
 
+import { move } from './animations.js';
+
 //INPUTS#####################################################################
 
 //input task
@@ -65,6 +67,9 @@ form.addEventListener('submit', (e) => {
 
   //renderizado de ul-tasks
   render();
+
+  //llamada funcion animacion gsap
+  move();
 });
 
 //RENDER UL#####################################################################
@@ -100,7 +105,7 @@ function render() {
     //asigno contenido al li
     liTask.innerHTML = `
         <p class="taskText">${text}</p>
-        <h3 class="taskPriority">${priority}</h3>
+        <h3 class="taskPriority">Prioridad: ${priority}</h3>
         <h3 class="taskDeadline">${date} ${hour}</h3>
         <input type="checkbox" />
     `;
