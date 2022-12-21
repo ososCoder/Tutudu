@@ -322,9 +322,9 @@ footer {
   }
   .form > img {
     display: block;
-    width: 20rem;
-    right: 1.5rem;
-    top: 4rem;
+    width: 18rem;
+    right: 1rem;
+    top: -2rem;
   }
   .newTask > input {
     width: 50%;
@@ -333,8 +333,9 @@ footer {
 
 @media (min-width: 1000px) {
   .form > img {
-    width: 28rem;
-    top: 1.5rem;
+    width: 20rem;
+    top: -3rem;
+    right: 3rem;
   }
 
   .form {
