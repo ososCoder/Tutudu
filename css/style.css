@@ -96,13 +96,8 @@ main {
   outline: none;
 }
 
-.newTask > input,
-.deadline > input {
+.newTask > input {
   width: 100%;
-}
-
-.priority > select {
-  width: 50%;
 }
 
 /*button add task*/
