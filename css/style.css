@@ -69,11 +69,17 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 0.5rem;
   position: relative;
   background-color: #fac213;
 }
 
+.form > img {
+  position: absolute;
+  display: none;
+}
 /*fieldsets*/
 .form > fieldset {
   padding: 0.1rem 0 0.8rem 0;
@@ -103,6 +109,7 @@ main {
 /*button add task*/
 .form > button {
   height: 2.8rem;
+  width: 100%;
   border-radius: 10px;
   border: 1px solid #303030;
   font-size: 1.1rem;
@@ -307,6 +314,37 @@ footer {
   scale: 1.2;
 }
 
+/*MEDIA QUERIES*/
+
+@media (min-width: 700px) {
+  .form > button {
+    width: 50%;
+  }
+  .form > img {
+    display: block;
+    width: 20rem;
+    right: 1.5rem;
+    top: 4rem;
+  }
+  .newTask > input {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .form > img {
+    width: 28rem;
+    top: 1.5rem;
+  }
+
+  .form {
+    padding: 2rem;
+  }
+
+  .tasks {
+    padding: 2rem;
+  }
+}
 /*CUSTOM SHAPES DIVIDERS*/
 /*header*/
 .custom-shape-divider-bottom-1671026833 {
